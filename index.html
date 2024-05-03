@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script type="module" src="/index.js"></script>
+
+    <title>RMC</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <img class="header__logo" src="/img/logo.svg" width="108" height="47" alt="Logo RMC" />
+
+        <button class="hamburger" type="button">
+          <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0 1.71429C0 1.25963 0.17779 0.823594 0.494258 0.502103C0.810725 0.180612 1.23995 0 1.6875 0H25.3125C25.7601 0 26.1893 0.180612 26.5057 0.502103C26.8222 0.823594 27 1.25963 27 1.71429C27 2.16894 26.8222 2.60498 26.5057 2.92647C26.1893 3.24796 25.7601 3.42857 25.3125 3.42857H1.6875C1.23995 3.42857 0.810725 3.24796 0.494258 2.92647C0.17779 2.60498 0 2.16894 0 1.71429ZM0 22.2857C0 21.8311 0.17779 21.395 0.494258 21.0735C0.810725 20.752 1.23995 20.5714 1.6875 20.5714H25.3125C25.7601 20.5714 26.1893 20.752 26.5057 21.0735C26.8222 21.395 27 21.8311 27 22.2857C27 22.7404 26.8222 23.1764 26.5057 23.4979C26.1893 23.8194 25.7601 24 25.3125 24H1.6875C1.23995 24 0.810725 23.8194 0.494258 23.4979C0.17779 23.1764 0 22.7404 0 22.2857ZM11.8125 10.2857C11.3649 10.2857 10.9357 10.4663 10.6193 10.7878C10.3028 11.1093 10.125 11.5453 10.125 12C10.125 12.4547 10.3028 12.8907 10.6193 13.2122C10.9357 13.5337 11.3649 13.7143 11.8125 13.7143H25.3125C25.7601 13.7143 26.1893 13.5337 26.5057 13.2122C26.8222 12.8907 27 12.4547 27 12C27 11.5453 26.8222 11.1093 26.5057 10.7878C26.1893 10.4663 25.7601 10.2857 25.3125 10.2857H11.8125Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+
+        <div class="header__wrapper">
+          <nav class="header__nav navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">THE STUDIO</a>
+              </li>
+
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">pROJECTS</a>
+              </li>
+
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">architecture</a>
+              </li>
+
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Blog</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button class="header__button" type="button">Contact</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__container">
+          <p class="hero__subtitle">Architecture design</p>
+
+          <h1 class="hero__title">Professional Interior Design</h1>
+
+          <p class="hero__description">
+            Design for now with the awareness of yesterday and unknown tomorrow. Because small details make the perfect
+            design. Helping you choose between good and best.
+          </p>
+
+          <button class="hero__button" type="button">Let’s Work Together</button>
+
+          <picture class="hero__picture">
+            <source srcset="/img/hero-title-desktop.avif" media="(min-width: 768px)" type="image/avif" />
+            <source srcset="/img/hero-title-desktop.webp" media="(min-width: 768px)" type="image/webp" />
+            <source srcset="/img/hero-title-desktop.png" media="(min-width: 768px)" />
+            <source srcset="/img/hero-title-mobile.avif" type="image/avif" />
+            <source srcset="/img/hero-title-mobile.webp" type="image/webp" />
+            <img class="hero__img" src="/img/hero-title-mobile.png" width="100" height="553" alt="Interior" />
+          </picture>
+
+          <div class="hero__bg-wrap"></div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="container services__container">
+          <p class="services__subtitle">TOP SERVICES</p>
+          <h2 class="services__title">Our Specializations</h2>
+
+          <ul class="services__list">
+            <li class="services__item">
+              <article class="card">
+                <picture class="card__picture">
+                  <source
+                    srcset="/img/services-1-desktop.avif, /img/services-1-desktop@2x.avif 2x"
+                    media="(min-width: 1024px)"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="/img/services-1-desktop.webp, /img/services-1-desktop@2x.webp 2x"
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="/img/services-1-desktop.jpg, /img/services-1-desktop@2x.jpg 2x"
+                    media="(min-width: 1024px)"
+                  />
+                  <source srcset="/img/services-1-mobile.avif, /img/services-1-mobile@2x.avif 2x" type="image/avif" />
+                  <source srcset="/img/services-1-mobile.webp, /img/services-1-mobile@2x.webp 2x" type="image/webp" />
+                  <img
+                    class="card__img"
+                    src="/img/services-1-mobile.jpg"
+                    srcset="/img/services-1-mobile@2x.jpg 2x"
+                    width="320"
+                    height="412"
+                    alt="Floor plan"
+                  />
+                </picture>
+                <h3 class="card__title">Floor plan</h3>
+                <p class="card__description">Tempor incididunt ut labore et dolore magna aliqua.</p>
+              </article>
+            </li>
+
+            <li class="services__item">
+              <article class="card">
+                <picture class="card__picture">
+                  <source
+                    srcset="/img/services-2-desktop.avif, /img/services-2-desktop@2x.avif 2x"
+                    media="(min-width: 1024px)"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="/img/services-2-desktop.webp, /img/services-2-desktop@2x.webp 2x"
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="/img/services-2-desktop.jpg, /img/services-2-desktop@2x.jpg 2x"
+                    media="(min-width: 1024px)"
+                  />
+                  <source srcset="/img/services-2-mobile.avif, /img/services-2-mobile@2x.avif 2x" type="image/avif" />
+                  <source srcset="/img/services-2-mobile.webp, /img/services-2-mobile@2x.webp 2x" type="image/webp" />
+                  <img
+                    class="card__img"
+                    src="/img/services-2-mobile.jpg"
+                    srcset="/img/services-2-mobile@2x.jpg 2x"
+                    width="320"
+                    height="412"
+                    alt="Interior Design"
+                  />
+                </picture>
+                <h3 class="card__title">Interior Design</h3>
+                <p class="card__description">Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+              </article>
+            </li>
+
+            <li class="services__item">
+              <article class="card">
+                <picture class="card__picture">
+                  <source
+                    srcset="/img/services-3-desktop.avif, /img/services-3-desktop@2x.avif 2x"
+                    media="(min-width: 1024px)"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="/img/services-3-desktop.webp, /img/services-3-desktop@2x.webp 2x"
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="/img/services-3-desktop.jpg, /img/services-3-desktop@2x.jpg 2x"
+                    media="(min-width: 1024px)"
+                  />
+                  <source srcset="/img/services-3-mobile.avif, /img/services-3-mobile@2x.avif 2x" type="image/avif" />
+                  <source srcset="/img/services-3-mobile.webp, /img/services-3-mobile@2x.webp 2x" type="image/webp" />
+                  <img
+                    class="card__img"
+                    src="/img/services-3-mobile.jpg"
+                    srcset="/img/services-3-mobile@2x.jpg 2x"
+                    width="320"
+                    height="412"
+                    alt="Architecture Design"
+                  />
+                </picture>
+                <h3 class="card__title">Architecture Design</h3>
+                <p class="card__description">Tempor incididunt ut labore et dolore magna aliqua.</p>
+              </article>
+            </li>
+
+            <li class="services__item">
+              <article class="card">
+                <picture class="card__picture">
+                  <source
+                    srcset="/img/services-4-desktop.avif, /img/services-4-desktop@2x.avif 2x"
+                    media="(min-width: 1024px)"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="/img/services-4-desktop.webp, /img/services-4-desktop@2x.webp 2x"
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="/img/services-4-desktop.jpg, /img/services-4-desktop@2x.jpg 2x"
+                    media="(min-width: 1024px)"
+                  />
+                  <source srcset="/img/services-4-mobile.avif, /img/services-4-mobile@2x.avif 2x" type="image/avif" />
+                  <source srcset="/img/services-4-mobile.webp, /img/services-4-mobile@2x.webp 2x" type="image/webp" />
+                  <img
+                    class="card__img"
+                    src="/img/services-4-mobile.jpg"
+                    srcset="/img/services-4-mobile@2x.jpg 2x"
+                    width="320"
+                    height="412"
+                    alt="Construction"
+                  />
+                </picture>
+                <h3 class="card__title">Construction</h3>
+                <p class="card__description">Tempor incididunt ut labore et dolore magna aliqua.</p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container about__container">
+          <h2 class="about__title">About Us</h2>
+
+          <p class="about__description">
+            As development continues, engineers may visit building destinations to guarantee that temporary workers
+            pursue the plan, keep to the timetable, utilize the predefined materials, and meet work-quality models.
+          </p>
+
+          <figure class="about__group-image">
+            <picture class="about__pic">
+              <source srcset="/img/about-1.avif" type="image/avif" />
+              <source srcset="/img/about-1.webp" type="image/webp" />
+              <img class="about__image" src="/img/about-1.jpg" width="185" height="279" alt="House" />
+            </picture>
+
+            <picture class="about__pic">
+              <source srcset="/img/about-2.avif" type="image/avif" />
+              <source srcset="/img/about-2.webp" type="image/webp" />
+              <img class="about__image" src="/img/about-2.jpg" width="185" height="279" alt="House" />
+            </picture>
+          </figure>
+
+          <div class="about__content">
+            <p class="about__text">
+              <span class="about__text-num">85<span class="about__text-percent">%</span></span>
+              <span class="about__text-text">Satisfied Clients</span>
+            </p>
+
+            <img class="about__content-img" src="/img/about-3.jpg" width="388" height="175" alt="House" />
+          </div>
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="container">
+          <p class="projects__subtitle">OUR PROJECT</p>
+
+          <div class="projects__info">
+            <h2 class="projects__title">Our Latest Projects</h2>
+
+            <ul class="projects__list">
+              <li class="projects__item">
+                <a class="projects__link active" href="#">All</a>
+              </li>
+
+              <li class="projects__item">
+                <a class="projects__link" href="#">Architecture</a>
+              </li>
+
+              <li class="projects__item">
+                <a class="projects__link" href="#">Construction</a>
+              </li>
+
+              <li class="projects__item">
+                <a class="projects__link" href="#">Interior Design</a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="projects__content-list">
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/img/project-1.avif" type="image/avif" />
+                <source srcset="/img/project-1.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/img/project-1.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/img/project-2.avif" type="image/avif" />
+                <source srcset="/img/project-2.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/img/project-2.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/img/project-3.avif" type="image/avif" />
+                <source srcset="/img/project-3.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/img/project-3.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/img/project-4.avif" type="image/avif" />
+                <source srcset="/img/project-4.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/img/project-4.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/img/project-5.avif" type="image/avif" />
+                <source srcset="/img/project-5.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/img/project-5.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/img/project-6.avif" type="image/avif" />
+                <source srcset="/img/project-6.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/img/project-6.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/img/project-7.avif" type="image/avif" />
+                <source srcset="/img/project-7.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/img/project-7.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/img/project-8.avif" type="image/avif" />
+                <source srcset="/img/project-8.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/img/project-8.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="experience">
+        <div class="container experience__container">
+          <div class="experience__content">
+            <h2 class="experience__title">We Create Digital Experience</h2>
+
+            <ul class="experience__list">
+              <li class="experience__item">
+                <span class="experience__number">75<span class="experience__percent">%</span></span>
+
+                <p class="experience__text">Architecture</p>
+              </li>
+
+              <li class="experience__item">
+                <span class="experience__number">85<span class="experience__percent">%</span></span>
+
+                <p class="experience__text">Construction</p>
+              </li>
+
+              <li class="experience__item">
+                <span class="experience__number">65<span class="experience__percent">%</span></span>
+
+                <p class="experience__text">Interior Design</p>
+              </li>
+            </ul>
+
+            <button class="experience__button" type="button">Lets work together</button>
+          </div>
+
+          <img class="experience__image" src="/img/experience.svg" width="558" height="480" alt="Plan" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

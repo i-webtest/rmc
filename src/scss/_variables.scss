@@ -1,0 +1,25 @@
+$font-family: 'Roboto', sans-serif;
+$second-family: 'Larken-Medium', sans-serif;
+$third-family: 'Larken-Regular', sans-serif;
+
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1280px;
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}

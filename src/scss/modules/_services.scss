@@ -1,0 +1,81 @@
+@use '../variables' as *;
+
+.services {
+  overflow-x: hidden;
+  padding: 50px 0 25px;
+
+  &__container {
+    padding: 0;
+  }
+
+  &__subtitle {
+    font-family: $third-family;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: #ffc978;
+    padding-left: 20px;
+    margin-bottom: 20px;
+
+    @include laptop {
+      font-family: $second-family;
+      text-align: center;
+      padding-left: 0;
+    }
+  }
+
+  &__title {
+    font-family: $third-family;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 100%;
+    padding-left: 20px;
+    margin-bottom: 30px;
+
+    @include laptop {
+      font-size: 60px;
+      text-align: center;
+      padding-left: 0;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 0 20px;
+
+    @include laptop {
+      overflow-x: unset;
+      padding: 0 40px;
+    }
+
+    @include desktop {
+      gap: 30px;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+
+    @include laptop {
+      flex-shrink: 1;
+    }
+  }
+
+  &__item:nth-child(1) {
+    @include laptop {
+      transform: translateY(-130px);
+    }
+  }
+
+  &__item:nth-child(4) {
+    @include laptop {
+      transform: translateY(-130px);
+    }
+  }
+}

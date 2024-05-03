@@ -1,0 +1,121 @@
+@use '../variables' as *;
+
+.experience {
+  position: relative;
+  z-index: 1;
+  background-color: #23262f;
+  padding: 30px 0;
+
+  @include desktop {
+    padding: 60px 0;
+  }
+
+  &::after {
+    @include laptop {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 350px;
+      background-image: url("data:image/svg+xml,%3Csvg width='573' height='623' viewBox='0 0 573 623' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M190.556 318.118V479.687C190.556 510.723 192.184 533.848 195.442 549.062C198.995 563.971 205.362 576.294 214.542 586.031C222.537 594.55 231.717 600.94 242.081 605.2C252.742 609.156 266.66 611.59 283.835 612.503V623H0V612.503C17.1752 611.59 30.945 609.156 41.3093 605.2C51.9698 600.94 61.2977 594.55 69.293 586.031C78.769 576.294 85.1357 563.971 88.393 549.062C91.6504 534.152 93.2791 511.027 93.2791 479.687V143.313C93.2791 111.973 91.6504 88.8479 88.393 73.9385C85.1357 59.0291 78.769 46.706 69.293 36.9692C61.2977 28.1453 51.9698 21.7556 41.3093 17.8C30.6488 13.8444 16.8791 11.4103 0 10.4974V0L214.098 0C249.929 0 273.471 0.152137 284.723 0.45641C330.622 2.58632 366.602 8.97607 392.66 19.6256C421.977 31.7966 444.63 50.053 460.621 74.3949C476.908 98.4325 485.051 126.426 485.051 158.374C485.051 205.841 467.58 243.875 432.637 272.477C421.977 280.997 410.132 287.995 397.102 293.472C384.369 298.949 367.194 304.121 345.577 308.99C363.344 316.597 376.522 324.508 385.109 332.723C391.92 339.113 398.139 347.176 403.765 356.913C409.391 366.345 417.831 383.232 429.084 407.574C455.439 463.256 475.279 504.029 488.605 529.892C502.226 555.451 513.627 574.012 522.807 585.574C530.21 595.007 537.317 601.549 544.128 605.2C551.235 608.851 560.859 611.285 573 612.503V623H425.53C418.127 606.265 413.389 595.615 411.316 591.051L380.223 518.482C361.567 474.971 342.764 436.48 323.812 403.01C304.86 369.844 287.536 347.176 271.842 335.005C263.847 328.92 255.259 324.66 246.079 322.226C236.899 319.487 225.647 318.118 212.321 318.118H190.556ZM190.556 308.077H207.435C244.154 308.077 270.361 305.947 286.056 301.687C302.047 297.427 317.001 288.603 330.919 275.215C362.012 244.788 377.558 207.058 377.558 162.026C377.558 137.988 372.968 115.472 363.788 94.4769C354.905 73.1778 342.467 55.682 326.477 41.9897C314.04 31.6444 299.233 24.494 282.058 20.5385C264.883 16.2786 240.453 14.1487 208.767 14.1487H190.556V308.077Z' fill='%231a1d26' /%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    @include desktop {
+      width: 550px;
+    }
+  }
+
+  &__container {
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: left;
+      align-items: center;
+      gap: 30px;
+    }
+
+    @include desktop {
+      gap: 60px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 20px;
+
+    @include desktop {
+      gap: 50px;
+    }
+  }
+
+  &__title {
+    max-width: 400px;
+    font-family: $third-family;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 111%;
+
+    @include desktop {
+      max-width: 460px;
+      font-size: 60px;
+      line-height: 117%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+
+    @include desktop {
+      gap: 70px;
+    }
+  }
+
+  &__number {
+    font-family: $third-family;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 159%;
+    color: #ffc978;
+    margin-bottom: 10px;
+
+    @include desktop {
+      font-size: 64px;
+      line-height: 109%;
+      color: #ffaf76;
+    }
+  }
+
+  &__percent {
+    font-size: 32px;
+  }
+
+  &__text {
+    font-size: 18px;
+    color: #dfe9eb;
+  }
+
+  &__button {
+    align-self: flex-start;
+    font-weight: 500;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 20px 35px;
+  }
+
+  &__image {
+    @include tablet {
+      width: 330px;
+    }
+
+    @include desktop {
+      width: 558px;
+    }
+  }
+}

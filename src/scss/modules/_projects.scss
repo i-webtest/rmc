@@ -1,0 +1,108 @@
+@use '../variables' as *;
+
+.projects {
+  padding: 25px 0 50px;
+
+  &__subtitle {
+    font-family: $second-family;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: #ffc978;
+    margin-bottom: 20px;
+
+    @include desktop {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__info {
+    margin-bottom: 60px;
+
+    @include laptop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+  }
+
+  &__title {
+    font-family: $third-family;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 100%;
+    margin-bottom: 30px;
+
+    @include laptop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-weight: 500;
+    line-height: 100%;
+    color: #abaeb7;
+    padding-bottom: 10px;
+
+    &.active {
+      position: relative;
+      color: #ffc978;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ffc978;
+      }
+    }
+  }
+
+  &__content-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 20px 10px;
+
+    @include tablet {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__content-item {
+    max-width: 189px;
+    height: 280px;
+    border: 2px solid #fff;
+
+    @include tablet {
+      max-width: 307px;
+    }
+
+    @include laptop {
+      height: 500px;
+    }
+  }
+
+  &__content-item:nth-child(odd) {
+    transform: translateY(-30px);
+  }
+
+  &__content-picture {
+  }
+
+  &__content-img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
