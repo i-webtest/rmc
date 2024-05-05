@@ -1,0 +1,66 @@
+@use '../variables' as *;
+
+.table {
+  width: 829px;
+  text-align: left;
+
+  border-collapse: collapse;
+
+  &__head {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: #ffb076;
+
+    & th {
+      padding-bottom: 10px;
+    }
+
+    & th:last-child {
+      text-align: right;
+    }
+  }
+
+  &__body {
+    letter-spacing: 0.03em;
+    color: #abaeb7;
+    text-transform: uppercase;
+    // border: 1px solid #abaeb7;
+    // border-bottom: none;
+
+    & td {
+      border: 1px solid #abaeb7;
+      border-left: 0;
+      border-right: 0;
+      padding: 30px 0 20px;
+    }
+
+    & td:last-child {
+      text-align: right;
+    }
+
+    & tr:last-child td {
+      border-bottom: 0;
+    }
+  }
+
+  &__body-title {
+    color: #fff;
+  }
+
+  &__link {
+    letter-spacing: 0.03em;
+    text-decoration: underline;
+    color: #fff;
+
+    &.active {
+      letter-spacing: 0.03em;
+      color: #ffb077;
+    }
+
+    &:hover {
+      color: #ffb077;
+    }
+  }
+}

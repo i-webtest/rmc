@@ -1,0 +1,89 @@
+@use '../variables' as *;
+
+.team {
+  padding: 25px 0;
+
+  @include desktop {
+    padding: 70px 0;
+  }
+
+  &__subtitle {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    text-align: center;
+    color: #ffc978;
+    margin-bottom: 20px;
+
+    @include laptop {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    font-family: $third-family;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 111%;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include laptop {
+      text-align: left;
+    }
+
+    @include desktop {
+      font-family: $third-family;
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 117%;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__figure {
+  }
+
+  &__picture {
+    display: block;
+    margin-bottom: 20px;
+
+    @include desktop {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__image {
+  }
+
+  &__list {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @include desktop {
+      font-size: 24px;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba(171, 174, 183, 0.3);
+    padding-bottom: 15px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include desktop {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+  }
+}
+.container {
+}
