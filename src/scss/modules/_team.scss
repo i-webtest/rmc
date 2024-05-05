@@ -43,9 +43,6 @@
     }
   }
 
-  &__figure {
-  }
-
   &__picture {
     display: block;
     margin-bottom: 20px;
@@ -53,9 +50,6 @@
     @include desktop {
       margin-bottom: 50px;
     }
-  }
-
-  &__image {
   }
 
   &__list {
@@ -81,9 +75,4 @@
       margin-bottom: 30px;
     }
   }
-
-  &__text {
-  }
-}
-.container {
 }
