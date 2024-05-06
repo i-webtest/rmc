@@ -14,7 +14,7 @@
       <div class="header__container">
         <img class="header__logo" src="/img/logo.svg" width="108" height="47" alt="Logo RMC" />
 
-        <button class="hamburger" type="button">
+        <button class="hamburger" type="button" aria-label="Open menu">
           <span></span>
         </button>
 
@@ -454,7 +454,7 @@
                 <td>110</td>
                 <td>$350,000</td>
                 <td>$2,500</td>
-                <td><a class="table__link" href="#">VIEW NOW</a></td>
+                <td><button class="table__link" data-tab="apartment">VIEW NOW</button></td>
               </tr>
               <tr>
                 <td class="table__body-title">THE GREEN VILLA</td>
@@ -462,7 +462,7 @@
                 <td>1120</td>
                 <td>$194,000</td>
                 <td>$3,500</td>
-                <td><a class="table__link" href="#">VIEW NOW</a></td>
+                <td><button class="table__link" data-tab="villa">VIEW NOW</button></td>
               </tr>
               <tr>
                 <td class="table__body-title">PENTHOUSE</td>
@@ -470,7 +470,7 @@
                 <td>320</td>
                 <td>$240,000</td>
                 <td>$2,500</td>
-                <td><a class="table__link active" href="#">VIEW NOW</a></td>
+                <td><button class="table__link active" data-tab="penthouse">VIEW NOW</button></td>
               </tr>
               <tr>
                 <td class="table__body-title">SPA LUXURY</td>
@@ -478,7 +478,7 @@
                 <td>520</td>
                 <td>$520,000</td>
                 <td>$9,000</td>
-                <td><a class="table__link" href="#">VIEW NOW</a></td>
+                <td><button class="table__link" data-tab="spa">VIEW NOW</button></td>
               </tr>
               <tr>
                 <td class="table__body-title">DUPLEX 13A</td>
@@ -486,7 +486,7 @@
                 <td>50</td>
                 <td>$150,000</td>
                 <td>$1,900</td>
-                <td><a class="table__link" href="#">VIEW NOW</a></td>
+                <td><button class="table__link" data-tab="duplex">VIEW NOW</button></td>
               </tr>
               <tr>
                 <td class="table__body-title">STUDIO 8A</td>
@@ -494,7 +494,7 @@
                 <td>99</td>
                 <td>$50,000</td>
                 <td>$900</td>
-                <td><a class="table__link" href="#">VIEW NOW</a></td>
+                <td><button class="table__link" data-tab="studio">VIEW NOW</button></td>
               </tr>
               <tr>
                 <td class="table__body-title">SIMPLEX 12A8</td>
@@ -502,12 +502,52 @@
                 <td>100</td>
                 <td>$120,000</td>
                 <td>$1,000</td>
-                <td><a class="table__link" href="#">VIEW NOW</a></td>
+                <td><button class="table__link" data-tab="simplex">VIEW NOW</button></td>
               </tr>
             </tbody>
           </table>
 
-          <img class="check__image" src="/img/apartment.jpg" width="410" height="500" alt="LUX APARTMENT" />
+          <picture class="check__picture" id="apartment">
+            <source srcset="/img/apartment.avif" type="image/avif" />
+            <source srcset="/img/apartment.webp" type="image/webp" />
+            <img class="check__image" src="/img/apartment.jpg" width="410" height="500" alt="LUX APARTMENT" />
+          </picture>
+
+          <picture class="check__picture" id="villa">
+            <source srcset="/img/villa.avif" type="image/avif" />
+            <source srcset="/img/villa.webp" type="image/webp" />
+            <img class="check__image" src="/img/villa.jpg" width="410" height="500" alt="THE GREEN VILLA" />
+          </picture>
+
+          <picture class="check__picture active" id="penthouse">
+            <source srcset="/img/penthouse.avif" type="image/avif" />
+            <source srcset="/img/penthouse.webp" type="image/webp" />
+            <img class="check__image" src="/img/penthouse.jpg" width="410" height="500" alt="PENTHOUSE" />
+          </picture>
+
+          <picture class="check__picture" id="spa">
+            <source srcset="/img/spa.avif" type="image/avif" />
+            <source srcset="/img/spa.webp" type="image/webp" />
+            <img class="check__image" src="/img/spa.jpg" width="410" height="500" alt="SPA LUXURY" />
+          </picture>
+
+          <picture class="check__picture" id="duplex">
+            <source srcset="/img/duplex.avif" type="image/avif" />
+            <source srcset="/img/duplex.webp" type="image/webp" />
+            <img class="check__image" src="/img/duplex.jpg" width="410" height="500" alt="DUPLEX" />
+          </picture>
+
+          <picture class="check__picture" id="studio">
+            <source srcset="/img/studio.avif" type="image/avif" />
+            <source srcset="/img/studio.webp" type="image/webp" />
+            <img class="check__image" src="/img/studio.jpg" width="410" height="500" alt="STUDIO" />
+          </picture>
+
+          <picture class="check__picture" id="simplex">
+            <source srcset="/img/simplex.avif" type="image/avif" />
+            <source srcset="/img/simplex.webp" type="image/webp" />
+            <img class="check__image" src="/img/simplex.jpg" width="410" height="500" alt="SIMPLEX" />
+          </picture>
         </div>
       </section>
 
@@ -614,16 +654,16 @@
 
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="footer__link active" href="#">THE STUDIO</a>
+            <a class="footer__link active" href="#about">About</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="#">pROJECTS</a>
+            <a class="footer__link" href="#projects">pROJECTS</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="#">architecture</a>
+            <a class="footer__link" href="#check">architecture</a>
           </li>
           <li class="footer__item">
-            <a class="footer__link" href="#">Blog</a>
+            <a class="footer__link" href="#team">Team</a>
           </li>
           <li class="footer__item">
             <a class="footer__link" href="#">Contact</a>

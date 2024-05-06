@@ -114,6 +114,15 @@
     flex-shrink: 0;
   }
 
+  &__picture {
+    display: none;
+    flex-shrink: 0;
+
+    &.active {
+      display: block;
+    }
+  }
+
   &__image {
     width: 410px;
     height: 500px;
