@@ -1,7 +1,177 @@
 @use '../variables' as *;
 
 .hamburger {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 27px;
+  height: 24px;
+
   @include laptop {
     display: none;
+  }
+
+  & span,
+  &::before,
+  &::after {
+    background-color: #fff;
+    border-radius: 4px;
+    transition: transform 0.3s ease, top 0.3s ease;
+  }
+
+  & span {
+    width: 20px;
+    height: 3px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 27px;
+    height: 3px;
+  }
+
+  // &::before {
+  //   top: 8px;
+  // }
+
+  // &::after {
+  //   bottom: 8px;
+  // }
+
+  &.active::before {
+    animation: moveTopLine 0.4s forwards;
+  }
+
+  &.active span {
+    animation: moveMidLine 0.4s forwards;
+  }
+
+  &.active::after {
+    animation: moveBotLine 0.4s forwards;
+  }
+
+  &::before {
+    animation: moveTopLineRev 0.4s forwards;
+  }
+
+  & span {
+    animation: moveMidLineRev 0.4s forwards;
+  }
+
+  &::after {
+    animation: moveBotLineRev 0.4s forwards;
+  }
+
+  @keyframes moveTopLine {
+    0% {
+      transform: scale(1) translateY(-7px);
+    }
+    25% {
+      transform: scale(1.2) translateY(-8px);
+    }
+    50% {
+      transform: scale(1) translateY(-7px);
+    }
+    75% {
+      transform: scale(1) translateY(0);
+    }
+    100% {
+      transform: scale(1) translateY(0px) rotate(-45deg);
+    }
+  }
+
+  @keyframes moveMidLine {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.2);
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes moveBotLine {
+    0% {
+      transform: scale(1) translateY(7px);
+    }
+    25% {
+      transform: scale(1.2) translateY(8px);
+    }
+    50% {
+      transform: scale(1) translateY(7px);
+    }
+    75% {
+      transform: scale(1) translateY(0);
+    }
+    100% {
+      transform: scale(1) translateY(0px) rotate(45deg);
+    }
+  }
+
+  @keyframes moveTopLineRev {
+    0% {
+      transform: scale(1) translateY(0) rotate(-45deg);
+    }
+    25% {
+      transform: scale(1.2) translateY(0) rotate(-45deg);
+    }
+    50% {
+      transform: scale(1) translateY(0) rotate(-45deg);
+    }
+    75% {
+      transform: scale(1) translateY(0) rotate(0);
+    }
+    100% {
+      transform: scale(1) translateY(-9px);
+    }
+  }
+
+  @keyframes moveMidLineRev {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes moveBotLineRev {
+    0% {
+      transform: scale(1) translateY(0) rotate(45deg);
+    }
+    25% {
+      transform: scale(1.2) translateY(0) rotate(45deg);
+    }
+    50% {
+      transform: scale(1) translateY(0) rotate(45deg);
+    }
+    75% {
+      transform: scale(1) translateY(0) rotate(0);
+    }
+    100% {
+      transform: scale(1) translateY(9px);
+    }
   }
 }

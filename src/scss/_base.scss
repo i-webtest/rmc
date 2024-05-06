@@ -71,6 +71,44 @@ iframe {
   border: none;
 }
 
+.lock {
+  overflow-y: hidden;
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-color: #fff;
+    transition: 0.5s ease-in-out;
+  }
+
+  &:before {
+    transform: translateY(-100%);
+  }
+  &:after {
+    transform: translateY(100%);
+  }
+
+  &:hover {
+    color: #000;
+
+    &:before {
+      transform: translateY(-50%);
+    }
+    &:after {
+      transform: translateY(50%);
+    }
+  }
+}
+
 .visually-hidden {
   position: fixed;
   transform: scale(0);

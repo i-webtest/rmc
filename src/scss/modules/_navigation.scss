@@ -1,22 +1,9 @@
 @use '../variables' as *;
 
 .navigation {
-  display: none;
-
-  @include laptop {
-    display: block;
-  }
-
-  &.active {
-    display: block;
-  }
-
   &__list {
     display: flex;
     gap: 35px;
-  }
-
-  &__item {
   }
 
   &__link {
