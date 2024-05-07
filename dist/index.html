@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/rmc/dist/favicon/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="/rmc/dist/fonts/roboto-v30-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/rmc/dist/fonts/roboto-v30-latin-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/rmc/dist/fonts/roboto-v30-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/rmc/dist/fonts/Larken-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/rmc/dist/fonts/Larken-Medium.woff2" as="font" type="font/woff2" crossorigin />
+
+
+    <title>RMC</title>
+
+    <style>
+      h1,
+      h3,
+      p {
+        margin: 0;
+      }
+      .check__description {
+        display: none;
+        align-items: center;
+        gap: 30px;
+        max-width: 360px;
+        line-height: 162%;
+        color: #d7e0e1;
+      }
+      .check__description:before {
+        content: '';
+        width: 2px;
+        height: 150px;
+        background-image: linear-gradient(180deg, #c5e1e400, #c5e1e4 51.56%, #c5e1e400);
+      }
+      .footer__contacts-phone__desktop {
+        display: none;
+      }
+      html {
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+      }
+      main {
+        display: block;
+      }
+      h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+      a {
+        background-color: transparent;
+      }
+      img {
+        border-style: none;
+      }
+      button {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button {
+        overflow: visible;
+      }
+      button {
+        text-transform: none;
+      }
+      [type='button'],
+      [type='button']::-moz-focus-inner,
+      button::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      [type='button']:-moz-focusring,
+      button:-moz-focusring {
+        outline: ButtonText dotted 1px;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      :root {
+        position: relative;
+        overflow-x: hidden;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+      *,
+      :after,
+      :before {
+        box-sizing: inherit;
+      }
+      body {
+        position: relative;
+        overflow-x: hidden;
+        min-width: 320px;
+        min-height: 100vh;
+        font-family: Roboto, sans-serif;
+        font-size: 16px;
+        color: #fff;
+        background-color: #0b0e17;
+        background-image: url('https://iwebtest.ru/rmc/img/bg.png');
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      button {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      .button {
+        position: relative;
+        overflow: hidden;
+      }
+      .button:after,
+      .button:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+      }
+      .button:before {
+        transform: translateY(-100%);
+      }
+      .button:after {
+        transform: translateY(100%);
+      }
+      .container {
+        max-width: 1390px;
+        padding: 0 20px;
+        margin: 0 auto;
+      }
+      @media (min-width: 768px) {
+        .container {
+          padding: 0 30px;
+        }
+      }
+      .header {
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        left: 0;
+        right: 0;
+      }
+      @media (min-width: 1024px) {
+        .container {
+          padding: 0 40px;
+        }
+        .header {
+          top: 25px;
+        }
+      }
+      .header__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 180px;
+        max-width: 1760px;
+        padding: 0 20px;
+        margin: 0 auto;
+      }
+      .header__logo {
+        width: 67px;
+      }
+      .header__wrapper {
+        display: none;
+      }
+      @media (min-width: 1024px) {
+        .header__logo {
+          width: 108px;
+        }
+        .header__wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+        }
+      }
+      .header__button {
+        display: none;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 15px 30px;
+      }
+      @media (min-width: 1024px) {
+        .header__button {
+          display: block;
+        }
+      }
+      .hamburger {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 27px;
+        height: 24px;
+      }
+      @media (min-width: 1024px) {
+        .hamburger {
+          display: none;
+        }
+      }
+      .hamburger span,
+      .hamburger:after,
+      .hamburger:before {
+        background-color: #fff;
+        border-radius: 4px;
+      }
+      .hamburger span {
+        width: 20px;
+        height: 3px;
+      }
+      .hamburger:after,
+      .hamburger:before {
+        content: '';
+        position: absolute;
+        width: 27px;
+        height: 3px;
+      }
+      .hamburger:before {
+        animation: 0.4s forwards moveTopLineRev;
+      }
+      .hamburger span {
+        animation: 0.4s forwards moveMidLineRev;
+      }
+      .hamburger:after {
+        animation: 0.4s forwards moveBotLineRev;
+      }
+      @keyframes moveTopLineRev {
+        0% {
+          transform: scale(1) translateY(0) rotate(-45deg);
+        }
+        25% {
+          transform: scale(1.2) translateY(0) rotate(-45deg);
+        }
+        50% {
+          transform: scale(1) translateY(0) rotate(-45deg);
+        }
+        75% {
+          transform: scale(1) translateY(0) rotate(0);
+        }
+        to {
+          transform: scale(1) translateY(-9px);
+        }
+      }
+      @keyframes moveMidLineRev {
+        0% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0;
+        }
+        75% {
+          opacity: 1;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes moveBotLineRev {
+        0% {
+          transform: scale(1) translateY(0) rotate(45deg);
+        }
+        25% {
+          transform: scale(1.2) translateY(0) rotate(45deg);
+        }
+        50% {
+          transform: scale(1) translateY(0) rotate(45deg);
+        }
+        75% {
+          transform: scale(1) translateY(0) rotate(0);
+        }
+        to {
+          transform: scale(1) translateY(9px);
+        }
+      }
+      .navigation__list {
+        display: flex;
+        gap: 35px;
+      }
+      .navigation__link {
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #abaeb7;
+      }
+      .hero {
+        position: relative;
+        padding-top: 147px;
+        padding-bottom: 460px;
+      }
+      @media (min-width: 768px) {
+        .hero {
+          padding-bottom: 100px;
+        }
+      }
+      .hero__container {
+        max-width: 1760px;
+        padding: 0 20px;
+        margin: 0 auto;
+      }
+      .hero__subtitle {
+        font-family: Larken-Medium, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.3em;
+        color: #ffc978;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      .hero__title {
+        max-width: 400px;
+        font-family: Larken-Regular, sans-serif;
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 129%;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .hero__description {
+        max-width: 534px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 155%;
+        color: #abaeb7;
+        margin-bottom: 30px;
+      }
+      .hero__button {
+        font-weight: 500;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 20px 35px;
+      }
+      .hero__picture {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        height: 553px;
+      }
+      @media (min-width: 768px) {
+        .hero__picture {
+          left: 0;
+          top: unset;
+          right: unset;
+          bottom: 0;
+          height: 60px;
+        }
+      }
+      .hero__img {
+        width: 100%;
+        height: 100%;
+      }
+      .hero__bg-wrap {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 402px;
+        background-image: url('https://iwebtest.ru/rmc/img/hero-bg-mobile.jpg');
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+      }
+      @media (min-width: 768px) {
+        .hero__bg-wrap {
+          top: 0;
+          left: unset;
+          max-width: 520px;
+          height: auto;
+          background-position: top right;
+          background-size: contain;
+        }
+        .about__title {
+          grid-area: title;
+        }
+      }
+      .services {
+        overflow-x: hidden;
+        padding: 50px 0 25px;
+      }
+      .services__container {
+        padding: 0;
+      }
+      .services__subtitle {
+        font-family: Larken-Regular, sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.3em;
+        color: #ffc978;
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+      @media (min-width: 1024px) {
+        .hero__bg-wrap {
+          max-width: 700px;
+        }
+        .services__subtitle {
+          font-family: Larken-Medium, sans-serif;
+          text-align: center;
+          padding-left: 0;
+        }
+      }
+      .services__title {
+        font-family: Larken-Regular, sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 100%;
+        padding-left: 20px;
+        margin-bottom: 30px;
+      }
+      @media (min-width: 1024px) {
+        .services__title {
+          font-size: 60px;
+          text-align: center;
+          padding-left: 0;
+          margin-bottom: 50px;
+        }
+      }
+      .services__list {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding: 0 20px;
+      }
+      .services__list::-webkit-scrollbar {
+        display: none;
+      }
+      .services__item {
+        flex-shrink: 0;
+      }
+      @media (min-width: 1024px) {
+        .services__list {
+          overflow-x: unset;
+          padding: 0 40px;
+        }
+        .services__item {
+          flex-shrink: 1;
+        }
+        .services__item:nth-child(1) {
+          transform: translateY(-130px);
+        }
+        .services__item:nth-child(4) {
+          transform: translateY(-130px);
+        }
+      }
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 10px;
+        max-width: 320px;
+        width: 100%;
+        height: 412px;
+        background: linear-gradient(180deg, #38656b00 60.42%, #063339);
+        padding: 20px;
+      }
+      @media (min-width: 1024px) {
+        .card {
+          height: 500px;
+        }
+      }
+      .card__picture {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .card__img {
+        height: 100%;
+      }
+      .card__title {
+        font-family: Larken-Medium, sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+      }
+      @media (min-width: 768px) {
+        .about__description {
+          grid-area: description;
+        }
+        .about__group-image {
+          grid-area: group;
+        }
+        .about__content {
+          grid-area: content;
+          display: flex;
+          flex-direction: column;
+        }
+        .about__text {
+          grid-area: text;
+          width: max-content;
+        }
+        .about__content-img {
+          grid-area: image;
+          margin: 0;
+        }
+      }
+      @media (min-width: 1024px) {
+        .about__content-icon {
+          grid-area: icon;
+          display: block;
+          align-self: self-end;
+        }
+      }
+      .footer__logo {
+        grid-area: logo;
+        margin-bottom: 40px;
+      }
+      .footer__description {
+        grid-area: text;
+        max-width: 350px;
+        line-height: 162%;
+        color: #abaeb7;
+        margin-bottom: 90px;
+      }
+      .footer__list {
+        grid-area: nav;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+      .footer__contacts {
+        grid-area: contacts;
+        max-width: 240px;
+        font-style: normal;
+        margin-bottom: 50px;
+      }
+      .footer__contacts-title {
+        font-family: Larken-Medium, sans-serif;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 100%;
+        margin-bottom: 10px;
+      }
+      @media (min-width: 1024px) {
+        .footer__contacts-title {
+          font-family: Larken-Regular, sans-serif;
+          font-weight: 400;
+          font-size: 48px;
+          margin-bottom: 5px;
+        }
+        .footer__contacts-phone__mobile {
+          display: none;
+        }
+      }
+      .footer__contacts-link {
+        font-size: 18px;
+        line-height: 144%;
+        color: #abaeb7;
+      }
+      .footer__copyright {
+        grid-area: copyright;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 157%;
+        text-align: center;
+        color: #abaeb7;
+        border-top: 1px solid #fff;
+        padding-top: 10px;
+      }
+    </style>
+    <script type="module" crossorigin src="/rmc/dist/assets/index-CzDH9bCL.js"></script>
+    <link rel="stylesheet" crossorigin href="/rmc/dist/assets/index-C4TS5MIW.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <img class="header__logo" src="/rmc/dist/img/logo.svg" width="108" height="47" alt="Logo RMC" />
+
+        <button class="hamburger" type="button" aria-label="Open menu">
+          <span></span>
+        </button>
+
+        <div class="header__wrapper">
+          <nav class="header__nav navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="#about">About</a>
+              </li>
+
+              <li class="navigation__item">
+                <a class="navigation__link" href="#projects">pROJECTS</a>
+              </li>
+
+              <li class="navigation__item">
+                <a class="navigation__link" href="#check">architecture</a>
+              </li>
+
+              <li class="navigation__item">
+                <a class="navigation__link" href="#team">Team</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button class="header__button button" type="button">Contact</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__container">
+          <p class="hero__subtitle">Architecture design</p>
+
+          <h1 class="hero__title">Professional Interior Design</h1>
+
+          <p class="hero__description">
+            Design for now with the awareness of yesterday and unknown tomorrow. Because small details make the perfect
+            design. Helping you choose between good and best.
+          </p>
+
+          <button class="hero__button button" type="button">Let’s Work Together</button>
+
+          <picture class="hero__picture">
+            <source srcset="/rmc/dist/img/hero-title-desktop.avif" media="(min-width: 768px)" type="image/avif" />
+            <source srcset="/rmc/dist/img/hero-title-desktop.webp" media="(min-width: 768px)" type="image/webp" />
+            <source srcset="/rmc/dist/img/hero-title-desktop.png" media="(min-width: 768px)" />
+            <source srcset="/rmc/dist/img/hero-title-mobile.avif" type="image/avif" />
+            <source srcset="/rmc/dist/img/hero-title-mobile.webp" type="image/webp" />
+            <img class="hero__img" src="/rmc/dist/img/hero-title-mobile.png" width="100" height="553" alt="Interior" />
+          </picture>
+
+          <div class="hero__bg-wrap"></div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="container services__container">
+          <p class="services__subtitle">TOP SERVICES</p>
+          <h2 class="services__title">Our Specializations</h2>
+
+          <ul class="services__list">
+            <li class="services__item">
+              <article class="card">
+                <picture class="card__picture">
+                  <source
+                    srcset="/rmc/dist/img/services-1-desktop.avif, /rmc/dist/img/services-1-desktop@2x.avif 2x"
+                    media="(min-width: 1024px)"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="/rmc/dist/img/services-1-desktop.webp, /rmc/dist/img/services-1-desktop@2x.webp 2x"
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="/rmc/dist/img/services-1-desktop.jpg, /rmc/dist/img/services-1-desktop@2x.jpg 2x"
+                    media="(min-width: 1024px)"
+                  />
+                  <source srcset="/rmc/dist/img/services-1-mobile.avif, /rmc/dist/img/services-1-mobile@2x.avif 2x" type="image/avif" />
+                  <source srcset="/rmc/dist/img/services-1-mobile.webp, /rmc/dist/img/services-1-mobile@2x.webp 2x" type="image/webp" />
+                  <img
+                    class="card__img"
+                    src="/rmc/dist/img/services-1-mobile.jpg"
+                    srcset="/rmc/dist/img/services-1-mobile@2x.jpg 2x"
+                    width="320"
+                    height="412"
+                    alt="Floor plan"
+                  />
+                </picture>
+                <h3 class="card__title">Floor plan</h3>
+                <p class="card__description">Tempor incididunt ut labore et dolore magna aliqua.</p>
+              </article>
+            </li>
+
+            <li class="services__item">
+              <article class="card">
+                <picture class="card__picture">
+                  <source
+                    srcset="/rmc/dist/img/services-2-desktop.avif, /rmc/dist/img/services-2-desktop@2x.avif 2x"
+                    media="(min-width: 1024px)"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="/rmc/dist/img/services-2-desktop.webp, /rmc/dist/img/services-2-desktop@2x.webp 2x"
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="/rmc/dist/img/services-2-desktop.jpg, /rmc/dist/img/services-2-desktop@2x.jpg 2x"
+                    media="(min-width: 1024px)"
+                  />
+                  <source srcset="/rmc/dist/img/services-2-mobile.avif, /rmc/dist/img/services-2-mobile@2x.avif 2x" type="image/avif" />
+                  <source srcset="/rmc/dist/img/services-2-mobile.webp, /rmc/dist/img/services-2-mobile@2x.webp 2x" type="image/webp" />
+                  <img
+                    class="card__img"
+                    src="/rmc/dist/img/services-2-mobile.jpg"
+                    srcset="/rmc/dist/img/services-2-mobile@2x.jpg 2x"
+                    width="320"
+                    height="412"
+                    alt="Interior Design"
+                  />
+                </picture>
+                <h3 class="card__title">Interior Design</h3>
+                <p class="card__description">Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+              </article>
+            </li>
+
+            <li class="services__item">
+              <article class="card">
+                <picture class="card__picture">
+                  <source
+                    srcset="/rmc/dist/img/services-3-desktop.avif, /rmc/dist/img/services-3-desktop@2x.avif 2x"
+                    media="(min-width: 1024px)"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="/rmc/dist/img/services-3-desktop.webp, /rmc/dist/img/services-3-desktop@2x.webp 2x"
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="/rmc/dist/img/services-3-desktop.jpg, /rmc/dist/img/services-3-desktop@2x.jpg 2x"
+                    media="(min-width: 1024px)"
+                  />
+                  <source srcset="/rmc/dist/img/services-3-mobile.avif, /rmc/dist/img/services-3-mobile@2x.avif 2x" type="image/avif" />
+                  <source srcset="/rmc/dist/img/services-3-mobile.webp, /rmc/dist/img/services-3-mobile@2x.webp 2x" type="image/webp" />
+                  <img
+                    class="card__img"
+                    src="/rmc/dist/img/services-3-mobile.jpg"
+                    srcset="/rmc/dist/img/services-3-mobile@2x.jpg 2x"
+                    width="320"
+                    height="412"
+                    alt="Architecture Design"
+                  />
+                </picture>
+                <h3 class="card__title">Architecture Design</h3>
+                <p class="card__description">Tempor incididunt ut labore et dolore magna aliqua.</p>
+              </article>
+            </li>
+
+            <li class="services__item">
+              <article class="card">
+                <picture class="card__picture">
+                  <source
+                    srcset="/rmc/dist/img/services-4-desktop.avif, /rmc/dist/img/services-4-desktop@2x.avif 2x"
+                    media="(min-width: 1024px)"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="/rmc/dist/img/services-4-desktop.webp, /rmc/dist/img/services-4-desktop@2x.webp 2x"
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="/rmc/dist/img/services-4-desktop.jpg, /rmc/dist/img/services-4-desktop@2x.jpg 2x"
+                    media="(min-width: 1024px)"
+                  />
+                  <source srcset="/rmc/dist/img/services-4-mobile.avif, /rmc/dist/img/services-4-mobile@2x.avif 2x" type="image/avif" />
+                  <source srcset="/rmc/dist/img/services-4-mobile.webp, /rmc/dist/img/services-4-mobile@2x.webp 2x" type="image/webp" />
+                  <img
+                    class="card__img"
+                    src="/rmc/dist/img/services-4-mobile.jpg"
+                    srcset="/rmc/dist/img/services-4-mobile@2x.jpg 2x"
+                    width="320"
+                    height="412"
+                    alt="Construction"
+                  />
+                </picture>
+                <h3 class="card__title">Construction</h3>
+                <p class="card__description">Tempor incididunt ut labore et dolore magna aliqua.</p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container about__container">
+          <h2 class="about__title">About Us</h2>
+
+          <p class="about__description">
+            As development continues, engineers may visit building destinations to guarantee that temporary workers
+            pursue the plan, keep to the timetable, utilize the predefined materials, and meet work-quality models.
+          </p>
+
+          <figure class="about__group-image">
+            <picture class="about__pic">
+              <source srcset="/rmc/dist/img/about-1.avif" type="image/avif" />
+              <source srcset="/rmc/dist/img/about-1.webp" type="image/webp" />
+              <img class="about__image" src="/rmc/dist/img/about-1.jpg" width="185" height="279" alt="House" />
+            </picture>
+
+            <picture class="about__pic">
+              <source srcset="/rmc/dist/img/about-2.avif" type="image/avif" />
+              <source srcset="/rmc/dist/img/about-2.webp" type="image/webp" />
+              <img class="about__image" src="/rmc/dist/img/about-2.jpg" width="185" height="279" alt="House" />
+            </picture>
+          </figure>
+
+          <div class="about__content">
+            <p class="about__text">
+              <span class="about__text-num">85<span class="about__text-percent">%</span></span>
+              <span class="about__text-text">Satisfied Clients</span>
+            </p>
+
+            <picture>
+              <source srcset="/rmc/dist/img/about-3.avif" type="image/avif" />
+              <source srcset="/rmc/dist/img/about-3.webp" type="image/webp" />
+              <img class="about__content-img" src="/rmc/dist/img/about-3.jpg" width="388" height="175" alt="House" />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="container">
+          <p class="projects__subtitle">OUR PROJECT</p>
+
+          <div class="projects__info">
+            <h2 class="projects__title">Our Latest Projects</h2>
+
+            <ul class="projects__list">
+              <li class="projects__item">
+                <a class="projects__link active" href="#" data-filter="all">All</a>
+              </li>
+
+              <li class="projects__item">
+                <a class="projects__link" href="#" data-filter="architecture">Architecture</a>
+              </li>
+
+              <li class="projects__item">
+                <a class="projects__link" href="#" data-filter="construction">Construction</a>
+              </li>
+
+              <li class="projects__item">
+                <a class="projects__link" href="#" data-filter="interior">Interior Design</a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="projects__content-list">
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/rmc/dist/img/project-1.avif" type="image/avif" />
+                <source srcset="/rmc/dist/img/project-1.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/rmc/dist/img/project-1.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/rmc/dist/img/project-2.avif" type="image/avif" />
+                <source srcset="/rmc/dist/img/project-2.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/rmc/dist/img/project-2.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/rmc/dist/img/project-3.avif" type="image/avif" />
+                <source srcset="/rmc/dist/img/project-3.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/rmc/dist/img/project-3.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/rmc/dist/img/project-4.avif" type="image/avif" />
+                <source srcset="/rmc/dist/img/project-4.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/rmc/dist/img/project-4.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/rmc/dist/img/project-5.avif" type="image/avif" />
+                <source srcset="/rmc/dist/img/project-5.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/rmc/dist/img/project-5.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/rmc/dist/img/project-6.avif" type="image/avif" />
+                <source srcset="/rmc/dist/img/project-6.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/rmc/dist/img/project-6.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/rmc/dist/img/project-7.avif" type="image/avif" />
+                <source srcset="/rmc/dist/img/project-7.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/rmc/dist/img/project-7.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+
+            <li class="projects__content-item">
+              <picture class="projects__content-picture">
+                <source srcset="/rmc/dist/img/project-8.avif" type="image/avif" />
+                <source srcset="/rmc/dist/img/project-8.webp" type="image/webp" />
+                <img
+                  class="projects__content-img"
+                  src="/rmc/dist/img/project-8.jpg"
+                  width="307"
+                  height="500"
+                  alt="Project image"
+                />
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="experience">
+        <div class="container experience__container">
+          <div class="experience__content">
+            <h2 class="experience__title">We Create Digital Experience</h2>
+
+            <ul class="experience__list">
+              <li class="experience__item">
+                <span class="experience__number">75<span class="experience__percent">%</span></span>
+
+                <p class="experience__text">Architecture</p>
+              </li>
+
+              <li class="experience__item">
+                <span class="experience__number">85<span class="experience__percent">%</span></span>
+
+                <p class="experience__text">Construction</p>
+              </li>
+
+              <li class="experience__item">
+                <span class="experience__number">65<span class="experience__percent">%</span></span>
+
+                <p class="experience__text">Interior Design</p>
+              </li>
+            </ul>
+
+            <button class="experience__button button" type="button">Lets work together</button>
+          </div>
+
+          <img class="experience__image" src="/rmc/dist/img/experience.svg" width="558" height="480" alt="Plan" />
+        </div>
+      </section>
+
+      <section class="check" id="check">
+        <div class="container check__container-top">
+          <div class="check__wrapper-title">
+            <p class="check__subtitle">OUR PROJECT</p>
+
+            <h2 class="check__title">Check Availability</h2>
+          </div>
+
+          <p class="check__description">
+            The unique architect with ideas from outside the world. Where design and science meet. With people’s comfort
+            in mind
+          </p>
+        </div>
+
+        <div class="check__container-bottom">
+          <table class="check__table table">
+            <thead class="table__head">
+              <tr>
+                <th>Residence</th>
+                <th>Bed/Bath</th>
+                <th>SQ. FT.</th>
+                <th>Sale Price</th>
+                <th>Rent Price</th>
+                <th>Floor Plan</th>
+              </tr>
+            </thead>
+
+            <tbody class="table__body">
+              <!-- <tr>
+                <td class="table__body-title">LUX APARTMENT</td>
+                <td>3/2</td>
+                <td>110</td>
+                <td>$350,000</td>
+                <td>$2,500</td>
+                <td><button class="table__link" data-tab="apartment">VIEW NOW</button></td>
+              </tr>
+              <tr>
+                <td class="table__body-title">THE GREEN VILLA</td>
+                <td>3/3</td>
+                <td>1120</td>
+                <td>$194,000</td>
+                <td>$3,500</td>
+                <td><button class="table__link" data-tab="villa">VIEW NOW</button></td>
+              </tr>
+              <tr>
+                <td class="table__body-title">PENTHOUSE</td>
+                <td>3/3</td>
+                <td>320</td>
+                <td>$240,000</td>
+                <td>$2,500</td>
+                <td><button class="table__link active" data-tab="penthouse">VIEW NOW</button></td>
+              </tr>
+              <tr>
+                <td class="table__body-title">SPA LUXURY</td>
+                <td>3/3</td>
+                <td>520</td>
+                <td>$520,000</td>
+                <td>$9,000</td>
+                <td><button class="table__link" data-tab="spa">VIEW NOW</button></td>
+              </tr>
+              <tr>
+                <td class="table__body-title">DUPLEX 13A</td>
+                <td>3/3</td>
+                <td>50</td>
+                <td>$150,000</td>
+                <td>$1,900</td>
+                <td><button class="table__link" data-tab="duplex">VIEW NOW</button></td>
+              </tr>
+              <tr>
+                <td class="table__body-title">STUDIO 8A</td>
+                <td>3/3</td>
+                <td>99</td>
+                <td>$50,000</td>
+                <td>$900</td>
+                <td><button class="table__link" data-tab="studio">VIEW NOW</button></td>
+              </tr>
+              <tr>
+                <td class="table__body-title">SIMPLEX 12A8</td>
+                <td>3/3</td>
+                <td>100</td>
+                <td>$120,000</td>
+                <td>$1,000</td>
+                <td><button class="table__link" data-tab="simplex">VIEW NOW</button></td>
+              </tr> -->
+            </tbody>
+          </table>
+
+          <!-- <picture class="check__picture" id="apartment">
+            <source srcset="/img/apartment.avif" type="image/avif" />
+            <source srcset="/img/apartment.webp" type="image/webp" />
+            <img class="check__image" src="/img/apartment.jpg" width="410" height="500" alt="LUX APARTMENT" />
+          </picture>
+
+          <picture class="check__picture" id="villa">
+            <source srcset="/img/villa.avif" type="image/avif" />
+            <source srcset="/img/villa.webp" type="image/webp" />
+            <img class="check__image" src="/img/villa.jpg" width="410" height="500" alt="THE GREEN VILLA" />
+          </picture>
+
+          <picture class="check__picture active" id="penthouse">
+            <source srcset="/img/penthouse.avif" type="image/avif" />
+            <source srcset="/img/penthouse.webp" type="image/webp" />
+            <img class="check__image" src="/img/penthouse.jpg" width="410" height="500" alt="PENTHOUSE" />
+          </picture>
+
+          <picture class="check__picture" id="spa">
+            <source srcset="/img/spa.avif" type="image/avif" />
+            <source srcset="/img/spa.webp" type="image/webp" />
+            <img class="check__image" src="/img/spa.jpg" width="410" height="500" alt="SPA LUXURY" />
+          </picture>
+
+          <picture class="check__picture" id="duplex">
+            <source srcset="/img/duplex.avif" type="image/avif" />
+            <source srcset="/img/duplex.webp" type="image/webp" />
+            <img class="check__image" src="/img/duplex.jpg" width="410" height="500" alt="DUPLEX" />
+          </picture>
+
+          <picture class="check__picture" id="studio">
+            <source srcset="/img/studio.avif" type="image/avif" />
+            <source srcset="/img/studio.webp" type="image/webp" />
+            <img class="check__image" src="/img/studio.jpg" width="410" height="500" alt="STUDIO" />
+          </picture>
+
+          <picture class="check__picture" id="simplex">
+            <source srcset="/img/simplex.avif" type="image/avif" />
+            <source srcset="/img/simplex.webp" type="image/webp" />
+            <img class="check__image" src="/img/simplex.jpg" width="410" height="500" alt="SIMPLEX" />
+          </picture> -->
+        </div>
+      </section>
+
+      <section class="team" id="team">
+        <div class="container">
+          <p class="team__subtitle">OUR PROJECT</p>
+          <h2 class="team__title">Meet With Our Team</h2>
+
+          <figure class="team__figure">
+            <picture class="team__picture">
+              <source srcset="/rmc/dist/img/team.avif" type="image/avif" />
+              <source srcset="/rmc/dist/img/team.webp" type="image/webp" />
+              <img class="team__image" src="/rmc/dist/img/team.jpg" width="1290" height="649" alt="Team" />
+            </picture>
+
+            <figcaption>
+              <ul class="team__list">
+                <li class="team__item">
+                  <p class="team__text">Cody Fisher - CEO</p>
+                </li>
+                <li class="team__item">
+                  <p class="team__text">Savannah Nguyen - Interior architect</p>
+                </li>
+                <li class="team__item">
+                  <p class="team__text">Jerome Bell - Interior</p>
+                </li>
+                <li class="team__item">
+                  <p class="team__text">Cameron Williamson - architect</p>
+                </li>
+                <li class="team__item">
+                  <p class="team__text">Marvin McKinney - COnstruction head</p>
+                </li>
+              </ul>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="images">
+        <h2 class="visually-hidden">Images</h2>
+
+        <ul class="images__list">
+          <li class="images__item">
+            <picture>
+              <source srcset="/rmc/dist/img/image-1.avif" type="image/avif" />
+              <source srcset="/rmc/dist/img/image-1.webp" type="image/webp" />
+              <img class="" src="/rmc/dist/img/image-1.jpg" width="258" height="350" alt="image-1" />
+            </picture>
+          </li>
+          <li class="images__item">
+            <picture>
+              <source srcset="/rmc/dist/img/image-2.avif" type="image/avif" />
+              <source srcset="/rmc/dist/img/image-2.webp" type="image/webp" />
+              <img class="" src="/rmc/dist/img/image-2.jpg" width="258" height="350" alt="image-2" />
+            </picture>
+          </li>
+          <li class="images__item">
+            <picture>
+              <source srcset="/rmc/dist/img/image-3.avif" type="image/avif" />
+              <source srcset="/rmc/dist/img/image-3.webp" type="image/webp" />
+              <img class="" src="/rmc/dist/img/image-3.jpg" width="258" height="350" alt="image-3" />
+            </picture>
+          </li>
+          <li class="images__item">
+            <picture>
+              <source srcset="/rmc/dist/img/image-4.avif" type="image/avif" />
+              <source srcset="/rmc/dist/img/image-4.webp" type="image/webp" />
+              <img class="" src="/rmc/dist/img/image-4.jpg" width="258" height="350" alt="image-4" />
+            </picture>
+          </li>
+          <li class="images__item">
+            <picture>
+              <source srcset="/rmc/dist/img/image-5.avif" type="image/avif" />
+              <source srcset="/rmc/dist/img/image-5.webp" type="image/webp" />
+              <img class="" src="/rmc/dist/img/image-5.jpg" width="258" height="350" alt="image-5" />
+            </picture>
+          </li>
+          <li class="images__item">
+            <picture>
+              <source srcset="/rmc/dist/img/image-6.avif" type="image/avif" />
+              <source srcset="/rmc/dist/img/image-6.webp" type="image/webp" />
+              <img class="" src="/rmc/dist/img/image-6.jpg" width="258" height="350" alt="image-6" />
+            </picture>
+          </li>
+          <li class="images__item">
+            <picture>
+              <source srcset="/rmc/dist/img/image-7.avif" type="image/avif" />
+              <source srcset="/rmc/dist/img/image-7.webp" type="image/webp" />
+              <img class="" src="/rmc/dist/img/image-7.jpg" width="258" height="350" alt="image-7" />
+            </picture>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <img class="footer__logo" src="/rmc/dist/img/logo.svg" width="139" height="50" alt="Logo" />
+
+        <p class="footer__description">
+          Take a look at how we designed this housesimply random text. It has roots in a piece of classical Latin
+          literature from 45 BC, making it over 2000 years old.
+        </p>
+
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link active" href="#about">About</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#projects">pROJECTS</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#check">architecture</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#team">Team</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Contact</a>
+          </li>
+        </ul>
+
+        <div class="footer__contacts">
+          <div class="footer__contacts-block">
+            <h2 class="footer__contacts-title">Visit</h2>
+
+            <address class="footer__address">
+              <p class="footer__contacts-address">Logan Barker, 865 Oak Boulevard, Elk Grove, Vermont 95184</p>
+            </address>
+          </div>
+
+          <div class="footer__contacts-phone__mobile">
+            <h2 class="footer__contacts-title">WhatsApp</h2>
+
+            <a class="footer__contacts-link" href="tel:8801761531774">+88 017-6153-1774</a>
+          </div>
+
+          <div class="footer__contacts-phone__desktop">
+            <h2 class="footer__contacts-title">Call</h2>
+
+            <a class="footer__contacts-link" href="tel:01761531774">017-6153-1774</a>
+          </div>
+        </div>
+
+        <p class="footer__copyright">
+          &copy; Copyright 2022 Email:
+          <a class="footer__copyright-link" href="mailto:Asibulasik@gmail.com">Asibulasik@gmail.com</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
