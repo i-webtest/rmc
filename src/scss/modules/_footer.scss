@@ -81,13 +81,6 @@
         );
       }
     }
-
-    // &::before {
-    //   content: '';
-    // }
-  }
-
-  &__item {
   }
 
   &__link {
@@ -115,9 +108,6 @@
     }
   }
 
-  &__contacts-block {
-  }
-
   &__contacts-title {
     font-family: $second-family;
     font-weight: 400;
@@ -131,6 +121,10 @@
       font-size: 48px;
       margin-bottom: 5px;
     }
+  }
+
+  &__address {
+    font-style: normal;
   }
 
   &__contacts-address {

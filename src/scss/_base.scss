@@ -27,6 +27,11 @@ body {
   color: #fff;
   background-color: #0b0e17;
   background-image: url('/img/bg.png');
+  background-image: image-set(
+    url('/img/bg.avif') type('image/avif'),
+    url('/img/bg.webp') type('image/webp'),
+    url('/img/bg.jpg') type('image/jpg')
+  );
 }
 
 img,

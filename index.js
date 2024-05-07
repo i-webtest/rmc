@@ -1,6 +1,10 @@
 import '@/scss/index.scss';
 import { menuControl } from './src/js/menuControl';
-import { tabsControl } from './src/js/tabsControl';
+import { renderTable } from './src/js/renderTable';
+import { renderProjectCard } from './src/js/renderProjectCard';
+import { renderImage } from './src/js/renderImage';
 
 menuControl();
-tabsControl();
+renderTable();
+renderProjectCard();
+renderImage();

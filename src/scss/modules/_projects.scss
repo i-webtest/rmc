@@ -67,6 +67,10 @@
         background-color: #ffc978;
       }
     }
+
+    &:hover {
+      color: #ffc978;
+    }
   }
 
   &__content-list {
@@ -91,6 +95,10 @@
 
     @include laptop {
       height: 500px;
+    }
+
+    &.hide {
+      display: none;
     }
   }
 
