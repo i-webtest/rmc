@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   // base: '/rmc/',
-  // base: '/rmc/dist/',
+  base: '/rmc/dist/',
   resolve: {
     alias: {
       '@': '/src',
