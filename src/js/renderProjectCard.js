@@ -2,7 +2,7 @@ import { filterProjectCard } from './filterProjectCard';
 import { getData } from './getData';
 
 export const renderProjectCard = async () => {
-  const data = await getData('https://rmc-json-server.onrender.com/project');
+  const data = await getData('https://i-webtest-json-server-687a.twc1.net/project');
   const contentList = document.querySelector('.projects__content-list');
   contentList.textContent = '';
 

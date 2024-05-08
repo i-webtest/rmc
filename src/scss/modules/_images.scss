@@ -55,4 +55,9 @@
     height: 350px;
     border: 1px solid #fff;
   }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+  }
 }

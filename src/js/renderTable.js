@@ -4,7 +4,7 @@ import { tabsControl } from './tabsControl';
 const containerBottom = document.querySelector('.check__container-bottom');
 
 export const renderTable = async () => {
-  const data = await getData('https://rmc-json-server.onrender.com/arch');
+  const data = await getData('https://i-webtest-json-server-687a.twc1.net/arch');
 
   const tBody = document.querySelector('.table__body');
   tBody.textContent = '';
